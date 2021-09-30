@@ -57,7 +57,6 @@ function Team(props) {
         <div>{parse(String(programData.text))}</div>
 
         <div>
-        <h4>Files</h4>
         <Link to={programData.file}>{programData.file}</Link>
       
         <h4>Experiment performed on {programData.date}</h4>

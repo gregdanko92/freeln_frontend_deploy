@@ -6,7 +6,7 @@ import axios from 'axios'
 import NavProgram from "../components/NavProgram";
 import Header from "../components/Header";
 
-const url = 'https://freeln.herokuapp.com/api/programs';
+const url = 'https://freeln.herokuapp.com/api/programs'
 function Program(props) {
     const programId = props.match.params.programId
     const [programData, setProgramData] = useState({});
