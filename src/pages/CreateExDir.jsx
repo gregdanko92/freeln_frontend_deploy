@@ -19,7 +19,7 @@ class CreateExDir extends Component {
       console.log(this.props.match.params.teamId)
     event.preventDefault() 
     console.log('form was submitted')
-    axios.post(`http://localhost:4000/api/programs/${this.props.match.params.programId}/${this.props.match.params.teamId}`, {
+    axios.post(`https://freeln.herokuapp.com/api/programs/${this.props.match.params.programId}/${this.props.match.params.teamId}`, {
     name: this.state.name
     }).then((response)=>{
         this.props.history.push(`/programs/${this.props.match.params.programId}/${this.props.match.params.teamId}`)  

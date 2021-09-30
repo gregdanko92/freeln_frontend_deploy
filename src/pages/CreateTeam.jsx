@@ -48,7 +48,7 @@ class CreateTeam extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault() 
     console.log('form was submitted')
-    axios.post(`http://localhost:4000/api/programs/${this.props.match.params.programId}`, {
+    axios.post(`https://freeln.herokuapp.com/api/programs/${this.props.match.params.programId}`, {
     name: this.state.name,
     date: this.state.date,
     content: this.state.content,

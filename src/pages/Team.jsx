@@ -7,7 +7,7 @@ import parse from 'html-react-parser'
 import NavTeam from "../components/NavTeam";
 import Header from "../components/Header";
 
-const url = 'http://localhost:4000/api/programs';
+const url = 'https://freeln.herokuapp.com';
 function Team(props) {
     const programId = props.match.params.programId
     const teamId = props.match.params.teamId

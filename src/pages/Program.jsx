@@ -6,7 +6,7 @@ import axios from 'axios'
 import NavProgram from "../components/NavProgram";
 import Header from "../components/Header";
 
-const url = 'http://localhost:4000/api/programs';
+const url = 'https://freeln.herokuapp.com/api/programs';
 function Program(props) {
     const programId = props.match.params.programId
     const [programData, setProgramData] = useState({});
@@ -40,7 +40,7 @@ function handleDelete(id){
     // setProgramData(newTeams)
     // console.log('delete clicked')
     // console.log(id)
-    axios.delete(`http://localhost:4000/api/programs/${programId}/${id}`)
+    axios.delete(`${url}/${programId}/${id}`)
     window.location.reload(false); 
    }
      function generateTeamsList(programData) {

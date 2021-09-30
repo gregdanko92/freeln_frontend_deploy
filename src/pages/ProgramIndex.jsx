@@ -35,7 +35,7 @@ function ProgramIndex(props) {
    setPrograms(newPrograms)
    console.log('delete clicked')
    console.log(id)
-   axios.delete(`http://localhost:4000/api/programs/${id}`)
+   axios.delete(`https://freeln.herokuapp.com/api/programs/${id}`)
    window.location.reload(false);
   }
 

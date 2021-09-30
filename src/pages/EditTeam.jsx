@@ -46,7 +46,7 @@ class CreateTeam extends Component {
     event.preventDefault() 
     console.log('form was submitted')
     //need to change the post route to put?
-    axios.put(`http://localhost:4000/api/programs/${this.props.match.params.programId}/${this.props.match.params.teamId}`, {
+    axios.put(`https://freeln.herokuapp.com/api/programs/${this.props.match.params.programId}/${this.props.match.params.teamId}`, {
     name: this.state.name,
     date: this.state.date,
     content: this.state.content,
@@ -64,7 +64,7 @@ class CreateTeam extends Component {
   }
   componentDidMount = ()=>{
       //api call here
-      axios.get(`http://localhost:4000/api/programs/${this.props.match.params.programId}/${this.props.match.params.teamId}/edit`)
+      axios.get(`https://freeln.herokuapp.com/api/programs/${this.props.match.params.programId}/${this.props.match.params.teamId}/edit`)
       .then((response)=>{
           console.log(response)
           this.setState({

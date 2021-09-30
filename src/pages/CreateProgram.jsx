@@ -30,7 +30,7 @@ class CreateProgram extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault() 
     console.log('form was submitted')
-    axios.post('http://localhost:4000/api/programs', {
+    axios.post('https://freeln.herokuapp.com/api/programs/', {
     name: this.state.name,
     description: this.state.description,
     date: this.state.date
