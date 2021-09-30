@@ -7,7 +7,7 @@ import parse from 'html-react-parser'
 import NavTeam from "../components/NavTeam";
 import Header from "../components/Header";
 
-const url = 'https://freeln.herokuapp.com';
+const url = 'https://freeln.herokuapp.com/api/programs';
 function Team(props) {
     const programId = props.match.params.programId
     const teamId = props.match.params.teamId
@@ -53,15 +53,9 @@ function Team(props) {
           </div>
 
       <div className='experiment-directories-main'>
-        {/* <h4>Description: {programData.content}</h4> */}
         <div>{parse(String(programData.text))}</div>
-
         <div>
         <Link to={programData.file}>{programData.file}</Link>
-      
-        <h4>Experiment performed on {programData.date}</h4>
-        
-
         <Link className="add-a-project-button
         " to={`/programs/${programId}/${teamId}/edit`}>
           Edit
